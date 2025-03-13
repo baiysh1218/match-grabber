@@ -34,7 +34,7 @@ const Header = () => {
     <nav className={styles.wrapper}>
       <div className={styles.nav_left_side}>
         <div>
-          <Image src={logo} alt="logo" width={257} height={32} />
+          <Image src={logo.src} alt="logo" width={257} height={32} />
         </div>
         <Select defaultValue={options[0].title} options={options} />
       </div>
