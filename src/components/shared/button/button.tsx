@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
 import classNames from "classnames";
 
-import refresh from "../../../../public/images/Refresh.svg";
+// import refresh from "../../../../public/images/Refresh.svg";
 
 import Image from "next/image";
 
