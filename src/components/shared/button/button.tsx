@@ -2,10 +2,10 @@ import React, { ButtonHTMLAttributes, FC } from "react";
 import classNames from "classnames";
 import Image from "next/image";
 
-import styles from "./styles.module.scss";
-
 import Refresh from "@/public/images/Refresh.svg";
 import Error from "@/public/images/alertError.svg";
+
+import styles from "./styles.module.scss";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";

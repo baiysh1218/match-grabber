@@ -8,9 +8,10 @@ import Loader from "../loader/loader";
 
 import { useSearchParams } from "next/navigation";
 
-import styles from "./styles.module.scss";
 import useMatchWebSocket from "@/src/services/hook/useWeSocket";
 import { MatchStatus, Matches } from "@/src/types/types";
+
+import styles from "./styles.module.scss";
 
 const MatchList = () => {
   const { lastJsonMessage, readyState, error } = useMatchWebSocket();

@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { Team } from "@/src/types/types";
+
 import styles from "./styles.module.scss";
-import { Team } from "@/types/types";
 
 const PlayerCard: FC<{ teamStats: Team }> = ({ teamStats }) => {
   const { place, players, points, total_kills } = teamStats;

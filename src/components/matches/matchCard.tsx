@@ -8,11 +8,12 @@ import PlayerList from "../players/playerList";
 import dayjs from "dayjs";
 import classNames from "classnames";
 
-import styles from "./styles.module.scss";
 import { statusTranslations } from "@/src/constants";
 import { Matches } from "@/src/types/types";
 
-const ArrowDown = "/images/arrowDown.svg";
+import ArrowDown from "@/public/images/arrowDown.svg";
+
+import styles from "./styles.module.scss";
 
 interface MatchCardProps {
   data: Matches;

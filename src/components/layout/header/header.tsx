@@ -2,13 +2,15 @@
 
 import Image from "next/image";
 
-import styles from "./styles.module.scss";
+import Logo from "@/public/images/Logo.svg";
+
 import { MatchStatus } from "@/src/types/types";
 import useMatchWebSocket from "@/src/services/hook/useWeSocket";
+
 import Select from "../../shared/select/select";
 import Button from "../../shared/button/button";
 
-const Logo = "/images/Logo.svg";
+import styles from "./styles.module.scss";
 
 const options = [
   {

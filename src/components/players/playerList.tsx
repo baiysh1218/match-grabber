@@ -1,8 +1,9 @@
 import React, { FC } from "react";
 import PlayerCard from "./playerCard";
 
+import { TeamStatsProps } from "@/src/types/types";
+
 import styles from "./styles.module.scss";
-import { TeamStatsProps } from "@/types/types";
 
 const PlayerList: FC<TeamStatsProps> = ({ awayTeam, homeTeam }) => {
   return (
