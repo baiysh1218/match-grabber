@@ -1,24 +1,17 @@
 "use client";
 import React from "react";
-
 import { MatchStatus, Matches } from "@/types/types";
 import { ReadyState } from "react-use-websocket";
-
 import useMatchWebSocket from "@/services/hook/useWeSocket";
-
 import MatchCard from "./matchCard";
-
 import Error from "../error/error";
 import Loader from "../loader/loader";
-
 import styles from "./styles.module.scss";
 import { useSearchParams } from "next/navigation";
 
 const MatchList = () => {
   const { lastJsonMessage, readyState, error } = useMatchWebSocket();
-
   const searchParams = useSearchParams();
-
   const status = searchParams.get("status");
 
   const matches = React.useMemo(() => {
@@ -33,7 +26,7 @@ const MatchList = () => {
       });
     }
     return [];
-  }, [lastJsonMessage]);
+  }, [lastJsonMessage, status]);
 
   if (readyState === ReadyState.CONNECTING) {
     return <Loader />;
