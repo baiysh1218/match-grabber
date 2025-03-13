@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <nav className={styles.wrapper}>
       <div className={styles.nav_left_side}>
-        <Image className={styles.logo} src={Logo} alt="Logo" />
+        <Logo />
         <Select defaultValue={options[0].title} options={options} />
       </div>
       <div className={styles.nav_right_side}>

@@ -35,19 +35,11 @@ const Button: FC<ButtonProps> = ({
         disabled={disabled || loading}
         {...rest}
       >
-        {error && <Image src={Error} alt="error" width={24} height={24} />}
+        {error && <Error />}
 
         {children}
 
-        {variant === "primary" && (
-          <Image
-            className={loading ? styles.loadingIcon : ""}
-            src={Refresh}
-            alt="refresh"
-            width={24}
-            height={24}
-          />
-        )}
+        {variant === "primary" && <Refresh />}
       </button>
     </div>
   );

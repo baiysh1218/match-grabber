@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@svgr/webpack": "^8.1.0",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.7",
@@ -21,6 +20,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@svgr/webpack": "^8.1.0",
     "@types/node": "^20.17.24",
     "@types/react": "^19",
     "@types/react-dom": "^19",

@@ -10,7 +10,7 @@ interface ErrorProp {
 const Error: FC<ErrorProp> = ({ error }) => {
   return (
     <div className={styles.error_wrapper}>
-      <Image width={100} src={ErrorIcon} alt="error" />
+      <ErrorIcon />
       <h2 className={styles.message}>{error}</h2>{" "}
     </div>
   );
