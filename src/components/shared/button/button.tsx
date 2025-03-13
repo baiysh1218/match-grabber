@@ -1,11 +1,11 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
 import classNames from "classnames";
 
-import Error from "../../../../public/images/alertError.svg";
-import Refresh from "../../../../public/images/Refresh.svg";
+import refresh from "../../../../public/images/Refresh.svg";
+
+import Image from "next/image";
 
 import styles from "./styles.module.scss";
-import Image from "next/image";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
@@ -35,12 +35,24 @@ const Button: FC<ButtonProps> = ({
         disabled={disabled || loading}
         {...rest}
       >
-        {error && <Image src={Error} alt="error" width={28} height={28} />}
+        {error && (
+          <Image
+            src={"/public/images/Refresh.svg"}
+            alt="error"
+            width={28}
+            height={28}
+          />
+        )}
 
         {children}
 
         {variant === "primary" && (
-          <Image src={Refresh} alt="refresh" width={26} height={26} />
+          <Image
+            src={"/public/images/Refresh.svg"}
+            alt="refresh"
+            width={26}
+            height={26}
+          />
         )}
       </button>
     </div>

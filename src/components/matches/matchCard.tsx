@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import Arrow from "../../../public/images/arrowDown.svg";
+import arrow from "../../../public/images/arrowDown.svg";
 import classNames from "classnames";
 import PlayerList from "../players/playerList";
 import { Matches } from "@/types/types";
@@ -39,7 +39,7 @@ const MatchCard: React.FC<MatchCardProps> = ({ data }) => {
           onClick={() => setIsOpen(!isOpen)}
           className={classNames(styles.arrow, { [styles.open]: isOpen })}
         >
-          <Image src={Arrow} alt="arrow" width={14} height={14} />
+          <Image src={arrow} alt="arrow" width={14} height={14} />
         </div>
         <PlayerList awayTeam={awayTeam} homeTeam={homeTeam} />
       </div>

@@ -2,7 +2,7 @@
 import Select from "@/components/shared/select/select";
 import Button from "@/components/shared/button/button";
 import { MatchStatus } from "@/types/types";
-import Logo from "../../../../public/images/Logo.svg";
+import logo from "../../../../public/images/Logo.svg";
 import useMatchWebSocket from "@/services/hook/useWeSocket";
 
 import styles from "./styles.module.scss";
@@ -34,15 +34,15 @@ const Header = () => {
     <nav className={styles.wrapper}>
       <div className={styles.nav_left_side}>
         <div>
-          <Image src={Logo} alt="logo" width={257} height={32} />
+          <Image src={logo} alt="logo" width={257} height={32} />
         </div>
         <Select defaultValue={options[0].title} options={options} />
       </div>
       <div className={styles.nav_right_side}>
         <div className={styles.error_wrapper}>
-          {(error || true) && (
+          {error && (
             <Button variant="secondary" error>
-              {error || "Ошибка: Соединение прервано, попробуйте обновить"}
+              {error}
             </Button>
           )}
         </div>
