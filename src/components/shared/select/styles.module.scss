@@ -39,6 +39,7 @@
       align-items: center;
       transition: all 0.3s ease-in-out;
       min-height: 56px;
+      height: 56px;
       padding: 10px 20px 10px 16px;
       display: flex;
       align-items: center;
@@ -87,9 +88,12 @@
         cursor: pointer;
         color: #b4b5b6;
         transition: all 0.3s ease-in-out;
-
+        &.active {
+          background-color: #0d1115;
+        }
         &:hover {
-          background-color: #1c242e;
+          color: white;
+          background-color: #11161d;
         }
       }
     }

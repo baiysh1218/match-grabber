@@ -6,6 +6,7 @@ import PlayerList from "../players/playerList";
 import { Matches } from "@/types/types";
 import dayjs from "dayjs";
 import { statusTranslations } from "@/constants";
+import Image from "next/image";
 import styles from "./styles.module.scss";
 
 interface MatchCardProps {
@@ -38,7 +39,7 @@ const MatchCard: React.FC<MatchCardProps> = ({ data }) => {
           onClick={() => setIsOpen(!isOpen)}
           className={classNames(styles.arrow, { [styles.open]: isOpen })}
         >
-          <Arrow />
+          <Image src={Arrow} alt="arrow" width={14} height={14} />
         </div>
         <PlayerList awayTeam={awayTeam} homeTeam={homeTeam} />
       </div>

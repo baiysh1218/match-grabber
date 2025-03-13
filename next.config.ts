@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
 
     config.module.rules.push({
       test: /\.svg$/,
-      use: ["@svgr/webpack"],
+      use: ["@svgr/webpack", "url-loader"],
     });
 
     return config;

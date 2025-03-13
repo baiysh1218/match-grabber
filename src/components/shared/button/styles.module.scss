@@ -19,14 +19,14 @@
     &:disabled {
       cursor: not-allowed;
       opacity: 0.7;
-      background-color: #ac0028;
+      background-color: #701328;
     }
 
     &.primary {
       background-color: #eb0237;
 
       &:hover:not(:disabled) {
-        background-color: #ac0028;
+        background-color: #a01131;
       }
       .loadingIcon {
         animation: circle 1s linear infinite;
@@ -53,7 +53,9 @@
     &.disabled {
       background-color: #ac0028;
       cursor: not-allowed;
+      color: #787878;
     }
+
     @media all and (max-width: 768px) {
       &.primary,
       &.secondary {

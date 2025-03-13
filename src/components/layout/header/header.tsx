@@ -6,6 +6,7 @@ import Logo from "../../../../public/images/Logo.svg";
 import useMatchWebSocket from "@/services/hook/useWeSocket";
 
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 const options = [
   {
@@ -33,19 +34,23 @@ const Header = () => {
     <nav className={styles.wrapper}>
       <div className={styles.nav_left_side}>
         <div>
-          <Logo />
+          <Image src={Logo} alt="logo" width={257} height={32} />
         </div>
         <Select defaultValue={options[0].title} options={options} />
       </div>
       <div className={styles.nav_right_side}>
-        {error && (
-          <Button variant="secondary" error>
-            {error}
+        <div className={styles.error_wrapper}>
+          {(error || true) && (
+            <Button variant="secondary" error>
+              {error || "Ошибка: Соединение прервано, попробуйте обновить"}
+            </Button>
+          )}
+        </div>
+        <div className={styles.refresh_wrapper}>
+          <Button loading={loading} onClick={handleReconnect}>
+            Обновить
           </Button>
-        )}
-        <Button loading={loading} onClick={handleReconnect}>
-          Обновить
-        </Button>
+        </div>
       </div>
     </nav>
   );

@@ -19,6 +19,7 @@ const Select: FC<SelectProps> = ({
   defaultValue,
   onChange,
 }) => {
+  const [active, setActive] = useState<string>("");
   const searchParams = useSearchParams();
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -35,6 +36,7 @@ const Select: FC<SelectProps> = ({
       params.set("status", "");
       router.replace(`?${params.toString()}`);
     } else {
+      setActive(status);
       const option = options.find((opt) => opt.value === status);
       if (option) {
         setSelectedOption(option.title);
@@ -102,6 +104,7 @@ const Select: FC<SelectProps> = ({
         <ul className={styles.select_dropdown} role="listbox">
           {options.map((option) => (
             <li
+              className={option.value === active ? styles.active : ""}
               key={option.value}
               role="option"
               onClick={() => handleOptionClick(option)}

@@ -5,6 +5,7 @@ import Error from "../../../../public/images/alertError.svg";
 import Refresh from "../../../../public/images/Refresh.svg";
 
 import styles from "./styles.module.scss";
+import Image from "next/image";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary";
@@ -34,11 +35,13 @@ const Button: FC<ButtonProps> = ({
         disabled={disabled || loading}
         {...rest}
       >
-        {error && <Error />}
+        {error && <Image src={Error} alt="error" width={28} height={28} />}
 
         {children}
 
-        {variant === "primary" && <Refresh />}
+        {variant === "primary" && (
+          <Image src={Refresh} alt="refresh" width={26} height={26} />
+        )}
       </button>
     </div>
   );
