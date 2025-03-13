@@ -14,8 +14,7 @@ interface MatchCardProps {
 }
 
 const MatchCard: React.FC<MatchCardProps> = ({ data }) => {
-  const { awayScore, homeScore, status, time, title, awayTeam, homeTeam } =
-    data;
+  const { awayScore, homeScore, status, time, awayTeam, homeTeam } = data;
 
   const [isOpen, setIsOpen] = useState(false);
   return (

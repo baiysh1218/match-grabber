@@ -40,7 +40,11 @@ const MatchList = () => {
   }
 
   if (readyState === ReadyState.CLOSED) {
-    return <Error error={error} />;
+    return (
+      <Error
+        error={error || "Ошибка: Соединение прервано, попробуйте обновить"}
+      />
+    );
   }
 
   return (

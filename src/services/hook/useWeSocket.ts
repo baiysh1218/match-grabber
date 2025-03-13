@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
-import useWebSocket, { ReadyState } from "react-use-websocket";
+import useWebSocket from "react-use-websocket";
 
 interface WebSocketMessage {
   type: string;

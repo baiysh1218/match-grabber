@@ -29,13 +29,20 @@ const Select: FC<SelectProps> = ({
 
   useEffect(() => {
     const status = searchParams.get("status");
-    if (status) {
+
+    if (status === null) {
+      const params = new URLSearchParams(searchParams.toString());
+      params.set("status", "");
+      router.replace(`?${params.toString()}`);
+    } else {
       const option = options.find((opt) => opt.value === status);
       if (option) {
         setSelectedOption(option.title);
+      } else {
+        setSelectedOption(null);
       }
     }
-  }, [searchParams, options]);
+  }, [searchParams, options, router]);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
