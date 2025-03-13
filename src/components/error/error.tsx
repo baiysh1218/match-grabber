@@ -1,5 +1,4 @@
 import React, { FC } from "react";
-import Image from "next/image";
 import ErrorIcon from "../../../public/images/alertError.svg";
 import styles from "./styles.module.scss";
 

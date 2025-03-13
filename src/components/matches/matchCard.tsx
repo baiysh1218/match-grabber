@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Arrow from "../../../public/images/arrowDown.svg";
-import Image from "next/image";
 import classNames from "classnames";
 import PlayerList from "../players/playerList";
 import { Matches } from "@/types/types";

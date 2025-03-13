@@ -1,11 +1,11 @@
 "use client";
-import Image from "next/image";
 import Select from "@/components/shared/select/select";
 import Button from "@/components/shared/button/button";
 import { MatchStatus } from "@/types/types";
 import Logo from "../../../../public/images/Logo.svg";
-import styles from "./styles.module.scss";
 import useMatchWebSocket from "@/services/hook/useWeSocket";
+
+import styles from "./styles.module.scss";
 
 const options = [
   {

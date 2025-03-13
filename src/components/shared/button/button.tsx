@@ -1,5 +1,4 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
-import Image from "next/image";
 import classNames from "classnames";
 
 import Error from "../../../../public/images/alertError.svg";
