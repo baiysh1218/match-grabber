@@ -32,7 +32,9 @@ const Header = () => {
   return (
     <nav className={styles.wrapper}>
       <div className={styles.nav_left_side}>
-        <Logo />
+        <div>
+          <Logo />
+        </div>
         <Select defaultValue={options[0].title} options={options} />
       </div>
       <div className={styles.nav_right_side}>
