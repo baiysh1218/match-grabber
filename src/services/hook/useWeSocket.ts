@@ -1,9 +1,10 @@
+import { Matches } from "@/types/types";
 import { useEffect, useState, useCallback } from "react";
 import useWebSocket from "react-use-websocket";
 
 interface WebSocketMessage {
   type: string;
-  data?: any;
+  data?: Matches[];
   message?: string;
 }
 
