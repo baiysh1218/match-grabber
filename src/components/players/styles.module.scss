@@ -1,0 +1,177 @@
+.teamStats {
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  overflow: hidden;
+}
+
+.players {
+  width: 100%;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+
+  .player {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 24px;
+    background-color: #101318;
+    border-radius: 4px;
+    gap: 8px;
+    min-height: 52px;
+    max-height: 52px;
+    width: 100%;
+    flex: 1 1 150px;
+
+    .playerName {
+      font-size: 16px;
+      color: white;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .playerKills {
+      font-size: 14px;
+      color: #fafafa66;
+      display: flex;
+      gap: 8px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    @media all and (max-width: 1300px) {
+      & {
+        padding: 14px 2%;
+        flex: 1 1 150px;
+      }
+    }
+
+    @media all and (max-width: 768px) {
+      & {
+        flex: 1 1 100%;
+        padding: 14px 16px;
+      }
+    }
+    @media all and (max-width: 590px) {
+      & {
+        flex-direction: column;
+        max-height: none;
+      }
+    }
+  }
+}
+
+.teamInfo {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #101318;
+  flex-wrap: wrap;
+
+  .statItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    width: 100%;
+    gap: 8px;
+    position: relative;
+    flex: 1 1 150px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 25%;
+      bottom: 25%;
+      width: 1px;
+      background-color: #63636366;
+    }
+
+    &:last-child::after {
+      display: none;
+    }
+
+    .statLabel {
+      font-size: 14px;
+      color: #fafafa66;
+    }
+
+    .statValue {
+      font-size: 14px;
+      color: white;
+    }
+
+    @media all and (max-width: 1300px) {
+      & {
+        padding: 14px 2%;
+        flex: 1 1 150px;
+      }
+    }
+
+    @media all and (max-width: 1080px) {
+      &:nth-child(2)::after {
+        display: none;
+      }
+      &:last-child::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 90%;
+        margin: auto;
+        height: 1px;
+        background-color: #63636366;
+      }
+    }
+
+    @media all and (max-width: 779px) {
+      &::after {
+        display: none;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        width: 90%;
+        margin: auto;
+        height: 1px;
+        background-color: #63636366;
+      }
+      &:first-child:before {
+        display: none;
+      }
+    }
+
+    @media all and (max-width: 768px) {
+      & {
+        flex: 1 1 100%;
+        padding: 14px 16px;
+        &::after {
+          display: none;
+        }
+      }
+    }
+
+    @media all and (max-width: 590px) {
+      & {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media all and (max-width: 768px) {
+    margin-top: 15px;
+  }
+}

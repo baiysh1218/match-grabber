@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav_left_side {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    .logo {
+      width: 257px;
+    }
+  }
+  .nav_right_side {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  @media all and (max-width: 750px) {
+    & {
+      flex-direction: column;
+      gap: 10px;
+      .nav_left_side {
+        flex-direction: column;
+        width: 100%;
+      }
+      .nav_right_side {
+        flex-direction: column-reverse;
+        width: 100%;
+      }
+    }
+  }
+}
