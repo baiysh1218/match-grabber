@@ -1,13 +1,16 @@
 "use client";
 import React from "react";
-import { MatchStatus, Matches } from "@/types/types";
 import { ReadyState } from "react-use-websocket";
-import useMatchWebSocket from "@/services/hook/useWeSocket";
+
 import MatchCard from "./matchCard";
 import Error from "../error/error";
 import Loader from "../loader/loader";
-import styles from "./styles.module.scss";
+
 import { useSearchParams } from "next/navigation";
+
+import styles from "./styles.module.scss";
+import useMatchWebSocket from "@/src/services/hook/useWeSocket";
+import { MatchStatus, Matches } from "@/src/types/types";
 
 const MatchList = () => {
   const { lastJsonMessage, readyState, error } = useMatchWebSocket();

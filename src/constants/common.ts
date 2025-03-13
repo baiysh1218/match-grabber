@@ -1,4 +1,4 @@
-import { MatchStatus } from "@/types/types";
+import { MatchStatus } from "../types/types";
 
 export const statusTranslations: Record<string, string> = {
   [MatchStatus.SCHEDULED]: "Запланирован",

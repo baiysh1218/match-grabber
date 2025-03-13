@@ -1,13 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import arrow from "../../../public/images/arrowDown.svg";
-import classNames from "classnames";
-import PlayerList from "../players/playerList";
-import { Matches } from "@/types/types";
-import dayjs from "dayjs";
-import { statusTranslations } from "@/constants";
+
 import Image from "next/image";
+
+import PlayerList from "../players/playerList";
+
+import dayjs from "dayjs";
+import classNames from "classnames";
+
 import styles from "./styles.module.scss";
+import { statusTranslations } from "@/src/constants";
+import { Matches } from "@/src/types/types";
+
+const ArrowDown = "/images/arrowDown.svg";
 
 interface MatchCardProps {
   data: Matches;
@@ -39,7 +44,7 @@ const MatchCard: React.FC<MatchCardProps> = ({ data }) => {
           onClick={() => setIsOpen(!isOpen)}
           className={classNames(styles.arrow, { [styles.open]: isOpen })}
         >
-          <Image src={arrow} alt="arrow" width={14} height={14} />
+          <Image src={ArrowDown} alt="arrow" width={14} height={14} />
         </div>
         <PlayerList awayTeam={awayTeam} homeTeam={homeTeam} />
       </div>

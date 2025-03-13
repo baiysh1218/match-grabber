@@ -23,15 +23,15 @@
     ],
     "paths": {
       "@/*": [
-        "./src/*"
+        "./*"
       ]
     },
     "skipLibCheck": true
   },
   "include": [
-    "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "declarations.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": [

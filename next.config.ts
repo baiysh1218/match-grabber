@@ -1,25 +1,14 @@
 import type { NextConfig } from "next";
-import webpack from "webpack";
+import { Configuration as WebpackConfiguration } from "webpack";
 
 const nextConfig: NextConfig = {
-  webpack(config: webpack.Configuration) {
-    if (!config.module) {
-      config.module = { rules: [] };
-    }
-
-    if (!config.module.rules) {
-      config.module.rules = [];
-    }
-
-    config.module.rules.push({
+  webpack: (config: WebpackConfiguration) => {
+    config.module?.rules?.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
 
     return config;
-  },
-  images: {
-    unoptimized: true,
   },
 };
 

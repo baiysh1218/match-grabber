@@ -1,12 +1,14 @@
 "use client";
-import Select from "@/components/shared/select/select";
-import Button from "@/components/shared/button/button";
-import { MatchStatus } from "@/types/types";
-import logo from "../../../../public/images/Logo.svg";
-import useMatchWebSocket from "@/services/hook/useWeSocket";
+
+import Image from "next/image";
 
 import styles from "./styles.module.scss";
-import Image from "next/image";
+import { MatchStatus } from "@/src/types/types";
+import useMatchWebSocket from "@/src/services/hook/useWeSocket";
+import Select from "../../shared/select/select";
+import Button from "../../shared/button/button";
+
+const Logo = "/images/Logo.svg";
 
 const options = [
   {
@@ -34,7 +36,7 @@ const Header = () => {
     <nav className={styles.wrapper}>
       <div className={styles.nav_left_side}>
         <div>
-          <Image src={logo.src} alt="logo" width={257} height={32} />
+          <Image src={Logo} alt="logo" width={257} height={32} />
         </div>
         <Select defaultValue={options[0].title} options={options} />
       </div>

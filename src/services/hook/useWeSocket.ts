@@ -1,4 +1,4 @@
-import { Matches } from "@/types/types";
+import { Matches } from "@/src/types/types";
 import { useEffect, useState, useCallback } from "react";
 import useWebSocket from "react-use-websocket";
 
